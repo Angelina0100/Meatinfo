@@ -1,0 +1,37 @@
+<article class="comment js-comment">
+        <a href="#" class="comment-rules blue-link">Правила публикации отзывов</a>
+        <div class="comment-container">
+            <h2 class="comment-container__mob-heading">Оставить отзыв</h2>
+
+            <button class="comment-container__mob-cross js-cross" type="button"></button>
+            <form  id="msgForm" class="comment-form" method="POST" action="#" enctype="multipart/form-data" target="_blank">
+                <div class="comment-form__header form-header">
+                    <div class="form-header__img author-img photo-default"></div>
+
+                    <div class="form-header__text author">
+                        <a class="author-name guest">Гость</a>
+
+                        <div class="author-rating">
+                            <div class="author-rating__container">
+                                <input class="author-rating__input star" type="radio" id="star5" name="rating" value="5" /><label class="star-label" for="star5"></label>
+                                <input class="author-rating__input star" type="radio" id="star4" name="rating" value="4" /><label class="star-label" for="star4"></label>
+                                <input class="author-rating__input star" type="radio" id="star3" name="rating" value="3" /><label class="star-label" for="star3"></label>
+                                <input class="author-rating__input star" type="radio" id="star2" name="rating" value="2" /><label class="star-label" for="star2"></label>
+                                <input class="author-rating__input star" type="radio" id="star1" name="rating" value="1" /><label class="star-label" for="star1"></label>
+                            </div>
+
+                            <span class="author-rating__welcome">Начните отзыв с выставления оценки</span>
+                        </div>
+                    </div>
+                </div>
+
+                <textarea class="comment-form__textarea"></textarea>
+
+                <div class="comment-form__footer form-footer">
+                    <label for="photoLoad" class="form-footer__label"><span>Прикрепить фото</span></label>
+                    <input id="photoLoad" type="file" class="form-footer__file" name="photo" multiple accept="image/*">
+                    <button type="submit" class="form-footer__submit cta-btn">Отправить</button>
+                </div>
+            </form>
+        </div>
+</article>

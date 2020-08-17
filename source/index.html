@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+//= components/header.html
+<main class="main">
+    <div class="wrapper main-wrapper">
+    <section class="main-central">
+        <h2 class="visually-hidden">Информация о компании</h2>
+        <section class="main-section section-top">
+            //= components/breadcrumbs.html
+
+                <form id="searchForm" class="main-form search" method="POST" action="#" enctype="multipart/form-data" target="_blank">
+                    <input class="search-input" name="searchInput" type="search" placeholder="Поиск по компаниям">
+                    <button aria-label="поле поиска" class="search-button"></button>
+                </form>
+
+                <a class="main-link back-link">К каталогу компаний</a>
+        </section>
+
+        <section class="main-section">
+            <div class="main-section__title">
+                <span class="comp_checked"></span>
+                <h2 class="title">Преображенский МПК, ООО</h2>
+                <div class="main-section__hint hint">
+                    <h3 class="hint-title co_checked">Подтверждённая компания</h3>
+                    <p class="hint-text">Реквизиты компании проверены банковским переводом</p>
+                </div>
+            </div>
+
+            <div class="main-section__info page-info">
+                <div class="page-info__views txt-btn txt-btn__grey">
+                    <span class="views-qty">578</span>
+                    <span class="views-new">(+2)</span>
+                </div>
+                <a class="page-info__stat txt-btn txt-btn__grey visually-hidden js-stat" href="#">Статистика</a>
+                <a class="page-info__edit txt-btn txt-btn__grey visually-hidden js-edit" href="#">Редактировать компанию</a>
+                <a class="page-info__comment txt-btn txt-btn__grey js-review">Оставить отзыв</a>
+                <button class="page-info__button cta-btn cta-btn__green js-btn">Работаете в этой компании?</button>
+            </div>
+
+        </section>
+
+        <section class="main-section company">
+            <h2 class="visually-hidden">О компании</h2>
+            <section class="company-content">
+                <section class="company-content__section adt">
+                    <h3 class="company-content__title adt-title">Последние объявления сотрудников компании</h3>
+                    <table class="adt-table">
+                        <thead class="adt-table__heading table-heading">
+                            <tr class="adt-table__row">
+                                <th class="adt-table__cell heading-cell" scope="col">Тип</th>
+                                <th class="adt-table__cell heading-cell" scope="col">Объявления</th>
+                                <th class="adt-table__cell heading-cell"scope="col">Время</th>
+                                <th class="adt-table__cell heading-cell"scope="col">Количество просмотров</th>
+                                <th class="adt-table__cell heading-cell"scope="col">Опубликовал</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="adt-table__body">
+                            <tr class="adt-table__row body-row">
+                                <td class="adt-table__cell" data-label="Тип"><span class="state state-sell">Продам</span></td>
+                                <td class="adt-table__cell" data-label="Объявления"><a class="blue-link" href="#">Желудки куриные очищенные 60 руб.</a></td>
+                                <td class="adt-table__cell" data-label="Время">5 фев</td>
+                                <td class="adt-table__cell" data-label="Количество просмотров">155</td>
+                                <td class="adt-table__cell" data-label="Опубликовал">
+                                    <div class="author">
+                                        <div class="author-img photo-default"></div>
+                                        <div class="author-text">
+                                            <a class="author-text__name blue-link">Татьяна Лобач</a>
+                                            <span class="author-text__co">Орехово-Зуевский мясокомбинат</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr scope="row"  class="adt-table__row body-row">
+                                <td class="adt-table__cell" data-label="Тип"><span class="state state-sell">Продам</span></td>
+                                <td class="adt-table__cell" data-label="Объявления"><a class="blue-link"  href="#">ГоленьЦБ(подл) 100р, Желудки кур.очиш 60 р</a></td>
+                                <td class="adt-table__cell" data-label="Время">27 янв</td>
+                                <td class="adt-table__cell" data-label="Количество просмотров">185</td>
+                                <td class="adt-table__cell" data-label="Опубликовал">
+                                    <div class="author">
+                                        <div class="author-img photo-default"></div>
+                                        <div class="author-text">
+                                            <a class="author-text__name blue-link">Татьяна Лобач</a>
+                                            <span class="author-text__co">Орехово-Зуевский мясокомбинат</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr scope="row"  class="adt-table__row body-row">
+                                <td class="adt-table__cell" data-label="Тип"><span class="state state-buy">Куплю</span></td>
+                                <td class="adt-table__cell" data-label="Объявления"><a class="blue-link"  href="#">Курица, Индейка, Говядина, Свинина от МК</a></td>
+                                <td class="adt-table__cell" data-label="Время">21 апр</td>
+                                <td class="adt-table__cell" data-label="Количество просмотров">42609</td>
+                                <td class="adt-table__cell" data-label="Опубликовал">
+                                    <div class="author">
+                                        <div class="author-img photo-default"></div>
+                                        <div class="author-text">
+                                            <a class="author-text__name blue-link">Татьяна Лобач</a>
+                                            <span class="author-text__co">Орехово-Зуевский мясокомбинат</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr scope="row"  class="adt-table__row body-row">
+                                <td class="adt-table__cell" data-label="Тип"><span class="state state-buy">Куплю</span></td>
+                                <td class="adt-table__cell" data-label="Объявления"><a class="blue-link"  href="#">ГоленьЦБ(подл) 100р, Желудки кур.очиш 60 р</a></td>
+                                <td class="adt-table__cell" data-label="Время">27 фев</td>
+                                <td class="adt-table__cell" data-label="Количество просмотров">319</td>
+                                <td class="adt-table__cell" data-label="Опубликовал">
+                                    <div class="author">
+                                        <div class="author-img photo-default"></div>
+                                        <div class="author-text">
+                                            <a class="author-text__name blue-link">Татьяна Лобач</a>
+                                            <span class="author-text__co">Орехово-Зуевский мясокомбинат</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr scope="row"  class="adt-table__row body-row">
+                                <td class="adt-table__cell" data-label="Тип"><span class="state state-sell">Продам</span></td>
+                                <td class="adt-table__cell" data-label="Объявления"><a class="blue-link"  href="#">ГоленьЦБ(подл) 100р, Желудки кур.очиш 60 р</a></td>
+                                <td class="adt-table__cell" data-label="Время">7 фев</td>
+                                <td class="adt-table__cell" data-label="Количество просмотров">10072</td>
+                                <td class="adt-table__cell" data-label="Опубликовал">
+                                    <div class="author">
+                                        <div class="author-img photo-default"></div>
+                                        <div class="author-text">
+                                            <a class="author-text__name blue-link">Татьяна Лобач</a>
+                                            <span class="author-text__co">Орехово-Зуевский мясокомбинат</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr scope="row"  class="adt-table__row body-row">
+                                <td class="adt-table__cell" data-label="Тип"><span class="state state-sell">Продам</span></td>
+                                <td class="adt-table__cell" data-label="Объявления"><a class="blue-link"  href="#">Фарш куриный ММО люкс 40руб/кг</a></td>
+                                <td class="adt-table__cell" data-label="Время">7 фев</td>
+                                <td class="adt-table__cell" data-label="Количество просмотров">300</td>
+                                <td class="adt-table__cell" data-label="Опубликовал">
+                                    <div class="author">
+                                        <div class="author-img photo-user"></div>
+                                        <div class="author-text">
+                                            <a class="author-text__name blue-link">Виталий Пчелинцев</a>
+                                            <span class="author-text__co">ООО ОКЕАНФИШ</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr scope="row"  class="adt-table__row body-row">
+                                <td class="adt-table__cell" data-label="Тип"><span class="state state-sell">Продам</span></td>
+                                <td class="adt-table__cell" data-label="Объявления"><a class="blue-link"  href="#">Фарш куриный ММО люкс 40руб/кг</a></td>
+                                <td class="adt-table__cell" data-label="Время">7 фев</td>
+                                <td class="adt-table__cell" data-label="Количество просмотров">319</td>
+                                <td class="adt-table__cell" data-label="Опубликовал">
+                                    <div class="author">
+                                        <div class="author-img photo-user"></div>
+                                        <div class="author-text">
+                                            <a class="author-text__name blue-link">Виталий Пчелинцев</a>
+                                            <span class="author-text__co">ООО ОКЕАНФИШ</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="company-content__section products">
+                    <h3 class="company-content__title products-title">Фото продукции</h3>
+                    <div class="products-photos">
+                        <a data-fancybox="gallery" href="img/img1.jpg"><img class="products-photos__item active-photo" src="img/img1.jpg" alt="Фото продукции компании" height="120" width="auto"></a>
+                        <a data-fancybox="gallery" href="img/img2.jpg"><img class="products-photos__item" src="img/img2.jpg" alt="Фото продукции компании" height="120" width="auto"></a>
+                        <a data-fancybox="gallery" href="img/img3.jpg"><<img class="products-photos__item" src="img/img1.jpg" alt="Фото продукции компании" height="120" width="auto"></a>
+                        <a data-fancybox="gallery" href="img/img4.jpg"><img class="products-photos__item" src="img/img3.jpg" alt="Фото продукции компании" height="120" width="auto"></a>
+                        <a data-fancybox="gallery" href="img/img4.jpg"><img class="products-photos__item" src="img/img4.jpg" alt="Фото продукции компании" height="120" width="auto"></a>
+                        <a data-fancybox="gallery" href="img/img2.jpg"><img class="products-photos__item" src="img/img2.jpg" alt="Фото продукции компании" height="120" width="auto"></a>
+                        <a data-fancybox="gallery" href="img/img2.jpg"><img class="products-photos__item" src="img/img2.jpg" alt="Фото продукции компании" height="120" width="auto"></a>
+                        <a data-fancybox="gallery" href="img/img1.jpg"><img class="products-photos__item" src="img/img1.jpg" alt="Фото продукции компании" height="120" width="auto"></a>
+                        <a data-fancybox="gallery" href="img/img3.jpg"><img class="products-photos__item" src="img/img3.jpg" alt="Фото продукции компании" height="120" width="auto"></a>
+                        <a data-fancybox="gallery" href="img/img4.jpg"><img class="products-photos__item" src="img/img4.jpg" alt="Фото продукции компании" height="120" width="auto"></a>
+                    </div>
+                </section>
+            </section>
+
+            //= components/company.html
+        </section>
+    </section>
+
+    <aside class="main-aside">
+        <h2 class="main-aside__heading visually-hidden">Реклама</h2>
+
+        <a class="main-aside__add add" href="#">
+            <picture>
+                <source srcset="img/banner1.webp 1x, img/banner2_2x.webp 2x" type="image/webp">
+                <img class="add-img" src="img/banner1.jpg" srcset="img/banner2_2x.jpg" alt="Реклама освежающей воды. Половинка яблока и лимона падают в воду">
+            </picture>
+        </a>
+
+        <a class="main-aside__add add" href="#">
+            <picture>
+                <source srcset="img/banner-2.webp" type="image/webp">
+                <source srcset="img/banner-2.jpg" type="image/jpeg">
+                <img class="add-img" src="img/banner-2.jpg" alt="Раклама банковских карт VISA. Улыбающийся спортсмен с ганетлями в руке, окруженный наградами, держит карту банка">
+            </picture>
+        </a>
+    </aside>
+    </div>
+    </main>
+<div class="up-btn"></div>
+//= components/msg_popup.html
+<!--<script src="js/jquery-1.9.0.min.js"></script>-->
+<script src="js/script.js"></script>
+</body>
+</html>

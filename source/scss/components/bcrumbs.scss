@@ -1,0 +1,22 @@
+.crumbs {
+  display: block;
+  color: #666666;
+  &-list {
+    display: flex;
+    @media screen and (max-width: 360px) {
+      font-size: 10px;
+    }
+    &__item {
+      position: relative;
+      margin-left: 5px;
+      &:not(:last-of-type)::after {
+        content: "/";
+        position: absolute;
+        right: -5px;
+      }
+    }
+  }
+}
+.crumb-active {
+  color: #212121;
+}

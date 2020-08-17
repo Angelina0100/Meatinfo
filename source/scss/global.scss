@@ -1,0 +1,182 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  background-color: #fff;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #424242;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  @include tablet {
+    padding: 0 33px
+  }
+  @include desktop {
+    max-width: 958px;
+  }
+  @include desktop-large {
+    max-width: 1366px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+input {
+  border: none;
+}
+
+.logo {
+  width: 120px;
+  @media screen and (min-width: 1024px) {
+    width: 180px;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/*Btns states*/
+
+.cta-btn {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  &__green {
+    @include cta-green(true);
+    &:hover,
+    &:active {
+      @include cta-green(false);
+    }
+  }
+  &.green-disabled {
+    @include cta-green(false);
+  }
+  &__blue {
+    background-color: $blue-main;
+    &:hover {
+      @include cta-blue(true)
+    }
+    &:active {
+      @include cta-blue(false);
+    }
+  }
+}
+
+.txt-btn {
+  position: relative;
+  padding-left: 24px;
+  font-size: 14px;
+  line-height: 20px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 18px;
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+  &__blue {
+    color: $blue-main;
+  }
+  &__grey {
+    color: $grey;
+  }
+}
+
+.blue-link {
+  color: $blue-main;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .up-btn {
+    width: 56px;
+    height: 56px;
+    right: 24px;
+    bottom: 24px;
+    border-radius: 50%;
+    background-color: rgba(0, 95, 174, 0.75);
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.0005 13.9995L12.0005 7.99951L6.00049 13.9995' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+    &:active {
+      background-color: rgba(255, 255, 255, 0.32);
+    }
+  }
+}
+
+.body-pop-up {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 10;
+  }
+}

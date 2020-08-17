@@ -1,0 +1,42 @@
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }
+};
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media screen and (min-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin cta-green($border-style: true) {
+  @if $border-style {
+    border: 1px solid $green;
+    color: $green;
+  } @else {
+    background-color: $green;
+    color: #fff;
+  }
+}
+
+@mixin cta-blue($hover: true) {
+  @if $hover {
+    background: rgba(255, 255, 255, 0.08);
+  } @else {
+    background: rgba(255, 255, 255, 0.32);
+  }
+}
