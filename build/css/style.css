@@ -957,7 +957,8 @@ input {
         margin-bottom: 20px; }
         @media screen and (max-width: 767px) {
           .main-aside__add:first-of-type {
-            margin-right: 20px; } }
+            margin-right: 20px;
+            margin-bottom: 0; } }
       .main-aside__add .add-img {
         -o-object-fit: cover;
            object-fit: cover;
@@ -1056,6 +1057,9 @@ input {
     font-size: 24px;
     line-height: 32px;
     color: #212121; }
+    @media screen and (max-width: 767px) {
+      .main-section__title .title {
+        font-size: 22px; } }
   .main-section__title .comp_checked {
     display: inline-block;
     width: 32px;
@@ -1099,7 +1103,8 @@ input {
     margin-left: auto; }
     @media screen and (max-width: 767px) {
       .page-info__button {
-        margin-left: 0; } }
+        margin-left: 0;
+        margin-top: 15px; } }
 
 .company {
   display: -webkit-box;
