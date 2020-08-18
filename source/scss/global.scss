@@ -166,12 +166,9 @@ input {
 }
 
 .body-pop-up {
-  position: relative;
   height: 100vh;
-  overflow: hidden;
-  &:before {
-    content: "";
-    position: absolute;
+  width: 100%;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -179,4 +176,4 @@ input {
     background: rgba(0,0,0,.5);
     z-index: 10;
   }
-}
+

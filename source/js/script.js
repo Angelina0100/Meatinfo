@@ -68,11 +68,11 @@ $(document).ready(function () {
 
     let closePopup = function() {
         $('.js-comment').fadeOut(300);
-        $('body').removeClass('body-pop-up');
+        $('.layout').removeClass('body-pop-up');
     }
     let openPopup = function() {
         $('.js-comment').fadeIn();
-        $('body').addClass('body-pop-up');
+        $('.layout').addClass('body-pop-up');
     }
     $('.js-review').on('click', function(evt) {
         evt.preventDefault();
