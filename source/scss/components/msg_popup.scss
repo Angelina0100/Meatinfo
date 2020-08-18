@@ -62,6 +62,11 @@
       border: 1px solid #E0E0E0;
       border-top-right-radius: 3px;
       border-top-left-radius: 3px;
+      @include placeholder {
+        font-size: 14px;
+        line-height: 20px;
+        color: #999999;
+      }
       @media screen and (max-width: 767px) {
         border-radius: 3px;
       }
